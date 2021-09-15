@@ -3,16 +3,16 @@
 (in-package #:mailmurder)
 
 (defclass mail ()
-  ((%subject :accessor mail-subject
+  ((subject :accessor mail-subject
              :initarg :subject
              :initform "")
-   (%to :accessor mail-to
+   (to :accessor mail-to
         :initarg :to
         :initform (error "At least one recipient needed."))
-   (%attachment :accessor mail-attachment
+   (attachment :accessor mail-attachment
                 :initarg :attachment
                 :initform nil)
-   (%body :accessor mail-body
+   (body :accessor mail-body
           :initarg :body
           :initform (error "Mail body is needed."))))
 
